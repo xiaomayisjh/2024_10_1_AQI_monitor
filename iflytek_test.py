@@ -22,7 +22,7 @@ data = {
     "stream": True
 }
 header = {
-    "Authorization": "Bearer JNrMZQJoUoFRcKwGQAyv:RjGIChxVtsPwpwnoJgCG"
+    "Authorization": "Bearer API_KEY:API_KEY"
 }
 response = requests.post(url, headers=header, json=data, stream=True)
 
