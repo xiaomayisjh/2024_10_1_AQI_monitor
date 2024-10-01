@@ -8,7 +8,7 @@ import re
 class Frame(wx.Frame):
     def __init__(self):
         super().__init__(None, title='2024_10_1_AQI_monitor', size=(680, 400))
-        icon = wx.Icon(r'F:\HuaweiMoveData\Users\QFF\Desktop\xiaomayisjh\xiaomayisjh-head.png')
+        icon = wx.Icon(r'xiaomayisjh-head.png')
         self.SetIcon(icon)
         self.panel = wx.Panel(self)
         self.Center()
@@ -21,7 +21,7 @@ class Frame(wx.Frame):
         self.start_button.SetFont(start_button_font)
         self.start_button.Bind(wx.EVT_BUTTON, self.on_start_button_click)
 
-        image_path = r'F:\HuaweiMoveData\Users\QFF\Desktop\xiaomayisjh\github-blog-2dcode.png'
+        image_path = r'github-blog-2dcode.png'
         image = wx.Image(image_path).Scale(200, 200).ConvertToBitmap()
         self.image_box = wx.StaticBitmap(self.panel, bitmap=image, size=(200, 200), pos=(24, 47))
 
