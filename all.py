@@ -80,7 +80,7 @@ class Frame(wx.Frame):
         return formatted_latitude, formatted_longitude
 
     def get_weather_data(self, latitude, longitude):
-        weather_api_key = "df41819bc7c24afba7f5f7b25cb314a8"
+        weather_api_key = "API_KEY"
         api_url = f"https://devapi.qweather.com/v7/air/now?location={longitude},{latitude}&key={weather_api_key}"
         response = requests.get(api_url)
         if response.status_code == 200:
@@ -105,7 +105,7 @@ class Frame(wx.Frame):
             "stream": True
         }
         header = {
-            "Authorization": "Bearer JNrMZQJoUoFRcKwGQAyv:RjGIChxVtsPwpwnoJgCG"
+            "Authorization": "Bearer API_KEY:API_KEY"
         }
         response = requests.post(url, headers=header, json=data, stream=True)
         response.encoding = "utf-8"
