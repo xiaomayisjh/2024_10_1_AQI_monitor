@@ -46,7 +46,7 @@ print(f"Latitude: {latitude}, Longitude: {longitude}")
 atted_latitude, formatted_longitude = format_coordinates(latitude, longitude)
 print(f"atted_latitude: {atted_latitude}, formatted_longitude: {formatted_longitude}")
 
-weather_api_key = f"df41819bc7c24afba7f5f7b25cb314a8"
+weather_api_key = f"API_KEY"
 api_url = f"https://devapi.qweather.com/v7/air/now?location={formatted_longitude},{atted_latitude}&key={weather_api_key}"
 
 # 发送GET请求
@@ -93,7 +93,7 @@ data = {
     "stream": True
 }
 header = {
-    "Authorization": "Bearer JNrMZQJoUoFRcKwGQAyv:RjGIChxVtsPwpwnoJgCG"
+    "Authorization": "Bearer API_KEY:API_KEY"
 }
 response = requests.post(url, headers=header, json=data, stream=True)
 
